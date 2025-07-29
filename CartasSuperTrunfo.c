@@ -10,46 +10,80 @@ int main() {
     float pib[2];
     int pontos_turisticos[2];
 
-    for (int cidade = 0; cidade < 2; cidade++) {
-        printf("\n--- Cadastro da Cidade %d ---\n", cidade + 1);
+    // Cidade 1
+    printf("\n--- Cadastro da Cidade 1 ---\n");
 
-        printf("Digite uma letra de 'A' a 'H': ");
-        scanf(" %c", &letra_inicial[cidade]);
+    printf("Digite uma letra de 'A' a 'H': ");
+    scanf(" %c", &letra_inicial[0]);
 
-        printf("A letra do estado seguida de um número de 01 a 04 (ex: A01, B03): ");
-        scanf("%9s", codigo_da_carta[cidade]);
-        getchar(); // consome o '\n'
+    printf("A letra do estado seguida de um número de 01 a 04 (ex: A01, B03): ");
+    scanf("%9s", codigo_da_carta[0]);
+    getchar(); // consome o '\n'
 
-        printf("Digite o nome da cidade: ");
-        fgets(nome_da_cidade[cidade], sizeof(nome_da_cidade[cidade]), stdin);
-        // Remove o '\n' se estiver presente
-        nome_da_cidade[cidade][strcspn(nome_da_cidade[cidade], "\n")] = '\0';
+    printf("Digite o nome da cidade: ");
+    fgets(nome_da_cidade[0], sizeof(nome_da_cidade[0]), stdin);
+    nome_da_cidade[0][strcspn(nome_da_cidade[0], "\n")] = '\0';
 
-        printf("Digite a população da cidade: ");
-        scanf("%d", &populacao[cidade]);
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao[0]);
 
-        printf("Digite a área em quilômetros quadrados da cidade: ");
-        scanf("%f", &kms_quadrados[cidade]);
+    printf("Digite a área em quilômetros quadrados da cidade: ");
+    scanf("%f", &kms_quadrados[0]);
 
-        printf("Digite o PIB da cidade: ");
-        scanf("%f", &pib[cidade]);
+    printf("Digite o PIB da cidade: ");
+    scanf("%f", &pib[0]);
 
-        printf("Digite o número de pontos turísticos da cidade: ");
-        scanf("%d", &pontos_turisticos[cidade]);
-    }
+    printf("Digite o número de pontos turísticos da cidade: ");
+    scanf("%d", &pontos_turisticos[0]);
 
-    // Impressão dos dados
+    getchar(); // limpa buffer
+
+    // Cidade 2
+    printf("\n--- Cadastro da Cidade 2 ---\n");
+
+    printf("Digite uma letra de 'A' a 'H': ");
+    scanf(" %c", &letra_inicial[1]);
+
+    printf("A letra do estado seguida de um número de 01 a 04 (ex: A01, B03): ");
+    scanf("%9s", codigo_da_carta[1]);
+    getchar(); // consome o '\n'
+
+    printf("Digite o nome da cidade: ");
+    fgets(nome_da_cidade[1], sizeof(nome_da_cidade[1]), stdin);
+    nome_da_cidade[1][strcspn(nome_da_cidade[1], "\n")] = '\0';
+
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao[1]);
+
+    printf("Digite a área em quilômetros quadrados da cidade: ");
+    scanf("%f", &kms_quadrados[1]);
+
+    printf("Digite o PIB da cidade: ");
+    scanf("%f", &pib[1]);
+
+    printf("Digite o número de pontos turísticos da cidade: ");
+    scanf("%d", &pontos_turisticos[1]);
+
+    // Impressão
     printf("\n\n===== Informações das Cidades =====\n");
-    for (int cidade = 0; cidade < 2; cidade++) {
-        printf("\n--- Cidade %d ---\n", cidade + 1);
-        printf("Letra da carta: %c\n", letra_inicial[cidade]);
-        printf("Código da carta: %s\n", codigo_da_carta[cidade]);
-        printf("Nome da cidade: %s\n", nome_da_cidade[cidade]);
-        printf("População da cidade: %d\n", populacao[cidade]);
-        printf("Área da cidade: %.2f km²\n", kms_quadrados[cidade]);
-        printf("PIB da cidade: %.2f bilhões de reais\n", pib[cidade]);
-        printf("Pontos turísticos: %d\n", pontos_turisticos[cidade]);
-    }
+
+    printf("\n--- Cidade 1 ---\n");
+    printf("Letra da carta: %c\n", letra_inicial[0]);
+    printf("Código da carta: %s\n", codigo_da_carta[0]);
+    printf("Nome da cidade: %s\n", nome_da_cidade[0]);
+    printf("População da cidade: %d\n", populacao[0]);
+    printf("Área da cidade: %.2f km²\n", kms_quadrados[0]);
+    printf("PIB da cidade: %.2f bilhões de reais\n", pib[0]);
+    printf("Pontos turísticos: %d\n", pontos_turisticos[0]);
+
+    printf("\n--- Cidade 2 ---\n");
+    printf("Letra da carta: %c\n", letra_inicial[1]);
+    printf("Código da carta: %s\n", codigo_da_carta[1]);
+    printf("Nome da cidade: %s\n", nome_da_cidade[1]);
+    printf("População da cidade: %d\n", populacao[1]);
+    printf("Área da cidade: %.2f km²\n", kms_quadrados[1]);
+    printf("PIB da cidade: %.2f bilhões de reais\n", pib[1]);
+    printf("Pontos turísticos: %d\n", pontos_turisticos[1]);
 
     return 0;
 }
