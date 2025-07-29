@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main() {
-    char letra_inicial[2];  // uma letra para cada cidade
+    char letra_inicial[2];  
     char codigo_da_carta[2][10];
     char nome_da_cidade[2][50];
     int populacao[2];
