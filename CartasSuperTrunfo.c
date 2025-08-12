@@ -74,26 +74,27 @@ int main() {
     limpar_buffer();
 
     // Cálculos
-    float densidade_1 = (float)populacao[0] / kms_quadrados[0]; 
-    if (kms_quadrados[0] != 0) {
-        densidade_1 = (float)populacao[0] / kms_quadrados[0];
-    } else {
-        densidade_1 = 0.0F;
-    };
-    float calculo_pib_1 = (pib[0] * 1000000000.0) / (float)populacao[0];
+    float densidade_1;
+    float calculo_pib_1;
+
+    if (kms_quadrados[0] != 0) { densidade_1 = (float)populacao[0] / kms_quadrados[0];
+    } else { densidade_1 = 0.0F; 
+}
+
     if (populacao[0] != 0) {
         calculo_pib_1 = (pib[0] * 1000000000.0) / (float)populacao[0];
     } else {
         calculo_pib_1 = 0.0F;
     }
 
-    float densidade_2 = (float)populacao[1] / kms_quadrados[1]; 
+    float densidade_2;
     if (kms_quadrados[1] != 0) {
         densidade_2 = (float)populacao[1] / kms_quadrados[1];
     } else {
         densidade_2 = 0.0F;
-    };
-    float calculo_pib_2 = (pib[1] * 1000000000.0) / (float)populacao[1];
+    }
+    
+    float calculo_pib_2;
     if (populacao[1] != 0) {
         calculo_pib_2 = (pib[1] * 1000000000.0) / (float)populacao[1];
     } else {
